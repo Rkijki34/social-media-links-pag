@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ro" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Social Media Links</title>
+  <meta name="description" content="Toate link-urile mele într-un singur loc." />
+  <meta property="og:title" content="Nume | Link-uri" />
+  <meta property="og:description" content="Toate link-urile mele într-un singur loc." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/preview.jpg" />
+  <meta name="theme-color" content="#111827" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Apply theme early -->
+  <script>
+    (function () {
+      try {
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="profile" aria-label="Profil">
+      <img id="avatar" class="avatar" alt="Avatar" src="" loading="lazy" />
+      <div class="profile-info">
+        <h1 id="name"></h1>
+        <p id="bio" class="bio"></p>
+        <div id="tags" class="tags" aria-label="Etichete"></div>
+      </div>
+
+      <div class="actions">
+        <button id="themeToggle" class="btn icon" type="button" aria-label="Schimbă tema" aria-pressed="false">
+          <iconify-icon icon="ph:moon-stars-duotone" width="22"></iconify-icon>
+          <span class="sr-only">Schimbă tema</span>
+        </button>
+        <button id="shareBtn" class="btn icon" type="button" aria-label="Distribuie">
+          <iconify-icon icon="ph:share-network-duotone" width="22"></iconify-icon>
+          <span class="sr-only">Distribuie</span>
+        </button>
+
+        <div id="langSwitch" class="lang-switch" role="group" aria-label="Schimbă limba">
+          <button class="btn lang" type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
+          <button class="btn lang" type="button" data-lang="ro" aria-pressed="true" aria-label="Română">RO</button>
+          <button class="btn lang" type="button" data-lang="ru" aria-pressed="false" aria-label="Русский">RU</button>
+          <button class="btn lang" type="button" data-lang="de" aria-pressed="false" aria-label="Deutsch">DE</button>
+        </div>
+      </div>
+    </header>
+
+    <section aria-label="Link-uri">
+      <ul id="linksList" class="links" role="list"></ul>
+    </section>
+
+    <footer class="footer">
+      <span id="footerText">Creat cu ❤️ · <a href="#" id="siteLink">@username</a></span>
+    </footer>
+  </main>
+
+  <noscript>
+    <div class="noscript">
+      RO: Pentru a vedea link-urile și a schimba tema, te rugăm să activezi JavaScript.<br/>
+      EN: To view the links and switch theme, please enable JavaScript.<br/>
+      RU: Чтобы увидеть ссылки и сменить тему, включите JavaScript.<br/>
+      DE: Um Links zu sehen und das Design zu wechseln, aktivieren Sie bitte JavaScript.
+    </div>
+  </noscript>
+</body>
+
+</html>
