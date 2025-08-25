@@ -12,8 +12,8 @@
         ru: "Создатель контента • все мои ссылки в одном месте",
         de: "Content Creator • alle meine Links an einem Ort"
       },
-      avatar: "https://i.pravatar.cc/200?img=5",
-      tags: ["Creator", "Streamer", "Cosplay"]
+      avatar: "200px",
+      tags: ["Wierrd", "Retard", "Sucks"]
     },
     links: [
       { label: "Instagram", url: "https://instagram.com/username" },
@@ -620,3 +620,4 @@
   });
 
 })();
+
