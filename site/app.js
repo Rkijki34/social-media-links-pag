@@ -4,7 +4,7 @@
   // ----------------- CONFIG (edit to your needs) -----------------
   const CONFIG = {
     profile: {
-      name: "Numele Tău",
+      name: "Empty",
       // Localized bio (optional). If you provide a string instead, it will be shown as-is.
       bio: {
         en: "Content creator • all my links in one place",
@@ -618,4 +618,5 @@
       console.error("Init error:", e);
     }
   });
+
 })();
